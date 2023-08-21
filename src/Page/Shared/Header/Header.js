@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../../assets/logo.png'
+import { AuthContext } from '../../../contexts/AuthProvider';
+import dp from './../../../assets/userProfile.jpg'
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(err => console.log(err));
+}
   const menuItem = <React.Fragment>
-          <li ><Link to='' className='block py-2 pl-3 pr-4 text-white bg-orange-700 rounded md:bg-transparent md:text-orange-700 md:p-0 dark:text-white md:dark:text-orange-500" aria-current="page"  '>Home</Link></li>
-          <li><Link to='' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Lessons</Link></li>
-          <li><Link to='' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Bangla Type</Link></li>
-          <li><Link to='' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Blogs</Link></li>
-          <li><Link to='' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Community</Link></li>
+          <li ><Link to='/' className='block py-2 pl-3 pr-4 text-white bg-orange-700 rounded md:bg-transparent md:text-orange-700 md:p-0 dark:text-white md:dark:text-orange-500" aria-current="page"  '>Home</Link></li>
+          <li><Link to='/lessons' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Lessons</Link></li>
+          <li><Link to='/banglatype' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Bangla Type</Link></li>
+          <li><Link to='/blogs' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Blogs</Link></li>
+          <li><Link to='/community' className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent '>Community</Link></li>
           
   </React.Fragment>
   return (
@@ -23,10 +31,10 @@ const Header = () => {
          {menuItem}
         </ul>
       </div>
-      <a href="https://flowbite.com/" class="flex items-center">
-        <img src={logo} class="h-8 mr-3" alt="Flowbite Logo" />
+      <Link to='/' class="flex items-center">
+        <img src={logo} class="h-8 mr-3" alt="Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> <span className=' text-orange-700'>BanglaShikho</span> </span>
-    </a>
+    </Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className=" font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -45,7 +53,31 @@ const Header = () => {
         <span className="badge badge-xs badge-primary indicator-item"></span>
       </div>
     </button>
-      <Link to='' className="btn btn-outline btn-error btn-sm ml-5">login</Link>
+      
+    {user?.uid ?
+            <>
+                
+                <div className="dropdown dropdown-end">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src={dp} />
+        </div>
+      </label>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-white rounded-box w-52">
+        <li>
+          <Link to="" className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </Link>
+        </li>
+        <li><Link to="">Settings</Link></li>
+        <li><Link onClick={handleLogOut} to="">Logout</Link></li>
+      </ul>
+    </div>
+  
+            </>
+            : <Link to='/login' className="btn btn-outline btn-error btn-sm ml-5">login</Link>}
+      
     </div>
   </div>
 
