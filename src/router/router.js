@@ -1,9 +1,11 @@
 import BanglaTyping from "../Page/BanglaTyping/BanglaTyping";
+import BlogWrite from "../Page/Blogs/BlogWrite";
 import Blogs from "../Page/Blogs/Blogs";
 import Community from "../Page/Community/Community";
 import Lessons from "../Page/Lessons/Lessons/Lessons";
 import Login from "../Page/Login/Login/Login";
 import SignUp from "../Page/Login/SignUp/SignUp";
+import Profile from "../Page/Shared/Profile/Profile";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -38,11 +40,18 @@ const router = createBrowserRouter([
       },
       {
         path:'/blogs',
-        element:<Blogs></Blogs>
+        element:<PrivateRoute><Blogs></Blogs></PrivateRoute>
+      },{
+        path:'/blogWrite',
+        element:<PrivateRoute><BlogWrite></BlogWrite></PrivateRoute>
       },
       {
         path:'/community',
         element:<PrivateRoute><Community></Community></PrivateRoute>
+      },
+      {
+        path:'/profile',
+        element:<Profile></Profile>
       }
     ]
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Typing from './Typing';
+import CommunityBlog from './CommunityBlog';
 
 const Features = () => {
   return (
@@ -12,6 +13,7 @@ const Features = () => {
       </section>
 
       <Typing></Typing>
+      <CommunityBlog></CommunityBlog>
     </div>
  
   );

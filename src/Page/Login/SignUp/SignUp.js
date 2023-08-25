@@ -27,7 +27,6 @@ const SignUp = () => {
                 navigate('/');
                 updateUser(userInfo)
                     .then(() => {
-                        
                     })
                     .catch(err => console.log(err));
             })
