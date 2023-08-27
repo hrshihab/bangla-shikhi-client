@@ -33,7 +33,7 @@ const Header = () => {
       </div>
       <Link to='/' class="flex items-center">
         <img src={logo} class="h-8 mr-3" alt="Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> <span className=' text-orange-700'>BanglaShikhi</span> </span>
+        <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-white"> <span className=' text-orange-700'>BanglaShikhi</span> </span>
     </Link>
     </div>
     <div className="navbar-center hidden lg:flex">

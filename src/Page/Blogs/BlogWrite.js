@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import blogGif from './../../assets/Blogs/blog.gif'
 import toast from 'react-hot-toast';
 import { AuthContext } from './../../contexts/AuthProvider';
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -13,8 +14,11 @@ const BlogWrite = () => {
   const {user} = useContext(AuthContext)
   const imageHostKey = process.env.REACT_APP_imgbb_key;
 
+  const navigate = useNavigate();
+
+
   const handlePostBlog = (data,event) => {   
-    const dateTime = new Date('2023-08-25T12:00:00')
+    const dateTime = new Date()
     const formatDate = (dateTime) => {
       return new Intl.DateTimeFormat("en", {
         day: "numeric",
@@ -26,6 +30,9 @@ const BlogWrite = () => {
         timeZoneName: "short"
       }).format(dateTime);
     };
+
+   // console.log(dateTime);
+    
 
     const permission = window.confirm('Are you ready to post blog ?')
     if(permission){
@@ -62,6 +69,7 @@ const BlogWrite = () => {
             console.log(result);
             toast.success(`${data.title} added successfully`)
             event.target.reset()
+            navigate('/blogs');
           })
           //console.log(blogInfo);
           
@@ -86,6 +94,30 @@ const BlogWrite = () => {
   return (
 
 <section class="bg-white dark:bg-gray-900 ">
+<section class=" border-b-2 rounded-b-[50px] md:rounded-b-[100px] xl:rounded-b-full shadow-md md:shadow-xl">
+<div className="text-sm breadcrumbs pl-10">
+          <ul>
+            <li><Link to="/">Home</Link></li> 
+            <li><Link to="/blogs">blogs</Link></li> 
+            <li>Write Blog</li>
+          </ul>
+        </div>
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-5 lg:pb-8">
+        <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white  md:text-3xl lg:text-4xl">Explore <span class="text-transparent bg-clip-text bg-gradient-to-r to-orange-400 from-pink-500">Our Blogs</span> </h1>
+        <p class="mb-8 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 lg:px-48">You can easily Share your blogs with us and can enhance your bangla learning skill. </p>
+        <div class="flex flex-col space-y-2 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <Link to="/blogs" class="inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Get started
+                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </Link>
+            <Link to="/" class="inline-flex justify-center text-gray-800 hover:text-gray-900 items-center py-2 px-5  dark:text-white  font-medium text-center bg-gray-200 rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Learn more
+            </Link>  
+        </div>
+    </div>
+</section>
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
         <div class="mx-auto place-self-center lg:col-span-7">
        
@@ -163,10 +195,10 @@ const BlogWrite = () => {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               >
                 <option selected="">Entertainment</option>
-                <option value="TV">Technology</option>
-                <option value="PC">Cultural</option>
-                <option value="GA">Educational</option>
-                <option value="PH">Others</option>
+                <option value="Technology">Technology</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Educational">Educational</option>
+                <option value="Others">Others</option>
               </select>{errors.category && <p className='text-red-500'>{errors.category.message}</p>}
             </div>
             <div class="sm:col-span-2">
@@ -178,8 +210,8 @@ const BlogWrite = () => {
               </label>
               <textarea
                 {...register('description',{
-                  required:'Description should be 200 to 2000 words',
-                  minLength:{value: 300 , message:'Title must be 300 characters long'}
+                  required:'Description minimum length should be 200 characters long',
+                  minLength:{value: 200 , message:'Description minimum length should be 200 characters long'}
                 })}
                 name="description"
                 id="description"

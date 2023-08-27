@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'flowbite-react';
 import { useQuery } from '@tanstack/react-query';
 import BlogCard from './BlogCard';
+import CardSkeleton from '../Shared/Loading/CardSkeleton';
 
 const Blogs = () => {
 
@@ -18,31 +19,127 @@ const {data : blogs = [],isLoading,refetch} = useQuery({
   }
 })
 
+
+
+
   return (
 
-    <section class="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900">
+
     
-
-    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-
-        <div class="max-w-screen-md px-8 pb-4 mx-auto text-center mb-8 lg:mb-16 shadow-2xl rounded-3xl border-b-1 border-orange-700">
-             <h1 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">See <span class="text-transparent bg-clip-text bg-gradient-to-r to-orange-400 from-pink-500">Our Blog</span> </h1>
-            <p class="text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-           
-            <button type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"><Link to='/blogWrite'>Write Blog</Link></button>
-
+    <section className=" border-b-2 rounded-b-[50px] md:rounded-b-[100px] xl:rounded-b-full shadow-md md:shadow-xl">
+    <div className="text-sm breadcrumbs pl-10">
+          <ul>
+            <li><Link to="/">Home</Link></li> 
+            <li>Blogs</li>
+          </ul>
         </div>
-        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+    <div className="px-4 mx-auto max-w-screen-xl text-center py-5 lg:pb-8">
+        <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-none  md:text-3xl lg:text-4xl">Explore <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-400 from-pink-500">Our Blogs</span> </h1>
+        <p className="mb-8 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 lg:px-48">You can easily Share your blogs with us and can enhance your bangla learning skill. </p>
+        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <Link to="/blogWrite" className="inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Write Blogs
+                <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </Link>
+            <Link to="/" className="inline-flex justify-center items-center py-2 px-5 text-gray-800 hover:text-gray-900 font-medium text-center bg-gray-200 rounded-lg border border-white hover:bg-gray-100  focus:ring-4 focus:ring-gray-400">
+                Learn more
+            </Link>  
+        </div>
+    </div>
+</section>
+
+<ul className="flex flex-wrap text-sm font-medium text-center text-gray-500   justify-center mt-8 dark:text-gray-400">
+    <li className="mr-2">
+        <Link to="#" aria-current="page" className="inline-block px-6 py-2 text-white bg-blue-500 rounded-full active dark:bg-gray-800 dark:text-blue-500">All</Link>
+    </li>
+    <li className="mr-2">
+        <Link to="#" className="inline-block px-4 py-2 rounded-full hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Entertainment</Link>
+    </li>
+    <li className="mr-2">
+        <Link to="#" className="inline-block px-4 py-2 rounded-full hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Technology</Link>
+    </li>
+    <li className="mr-2">
+        <Link to="#" className="inline-block px-4 py-2 rounded-full hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Cultural</Link>
+    </li>
+    <li className="mr-2">
+        <Link to="#" className="inline-block px-4 py-2 rounded-full hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Educational</Link>
+    </li>
+    <li className="mr-2">
+        <Link to="#" className="inline-block px-4 py-2 rounded-full hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Others</Link>
+    </li>
+   
+    
+<select id="countries" className="ml-6 bg-gray-50  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected>Latest</option>
+  <option value="US">Most Liked</option>
+  <option value="CA">Oldest</option>
+  <option value="FR">Ascending</option>
+  <option value="DE">Descending</option>
+</select>
+
+</ul>
+
+    <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+
+   
+        <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
            {
             blogs.map((blog,i)=> <BlogCard
             blog={blog}
             key={blog._id}
+            isLoading={isLoading}
 
             ></BlogCard>)
            }
                
         </div>
     </div>
+
+    <nav  className='flex justify-center py-5 mb-5'>
+  <ul className="flex items-center -space-x-px h-8 text-sm">
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <span className="sr-only">Previous</span>
+        <svg className="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        </svg>
+      </Link>
+    </li>
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</Link>
+    </li>
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</Link>
+    </li>
+    <li>
+      <Link to="#" aria-current="page" className="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</Link>
+    </li>
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</Link>
+    </li>
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</Link>
+    </li>
+    <li>
+      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <span className="sr-only">Next</span>
+        <svg className="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+      </Link>
+    </li>
+  </ul>
+  <select id="countries" className="ml-6 bg-gray-50 h-8   border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500  px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected>6</option>
+  <option value="10">10</option>
+  <option value="15">15</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+</select>
+</nav>
   </section>
   );
 };

@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import avatar from './../../assets/Blogs/147142.png'
+import CardSkeleton from './../Shared/Loading/CardSkeleton'
 
 
-const BlogCard = ({blog}) => {
-  const {title,description,category,image,userName,userEmail,userPhoto,dateTime} = blog
-  //console.log(blog);
+const BlogCard = ({blog,isLoading}) => {
+  const {title,description,category,image,userName,userEmail,userPhoto,dateTime,_id:id} = blog
+  //console.log(id);
+
   return (
    
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-gray-800 dark:border-gray-700">
       
-    <Link to="#">
+
+
+    <Link to={`/blog/${id}`}>
         <img class="rounded-t-lg h-52 w-full" src={image} alt="" />
     </Link>
 
@@ -19,7 +23,7 @@ const BlogCard = ({blog}) => {
                             {category}
                         </p>
 
-        <Link to="#">
+        <Link to={`/blog/${id}`}>
             <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         </Link>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description.slice(0,100)}...</p>

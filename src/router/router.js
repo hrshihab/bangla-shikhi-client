@@ -1,6 +1,7 @@
 import BanglaTyping from "../Page/BanglaTyping/BanglaTyping";
 import BlogWrite from "../Page/Blogs/BlogWrite";
 import Blogs from "../Page/Blogs/Blogs";
+import FullBlog from "../Page/Blogs/FullBlog";
 import Community from "../Page/Community/Community";
 import Lessons from "../Page/Lessons/Lessons/Lessons";
 import Login from "../Page/Login/Login/Login";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       },{
         path:'/blogWrite',
         element:<PrivateRoute><BlogWrite></BlogWrite></PrivateRoute>
+      },
+      {
+        path:'/blog/:id',
+        element:<PrivateRoute><FullBlog></FullBlog></PrivateRoute>
       },
       {
         path:'/community',

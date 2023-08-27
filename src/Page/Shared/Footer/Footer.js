@@ -4,7 +4,7 @@ import logo from './../../../assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-100 text-white mx-auto flex  justify-evenly border-t-4 md:border-t-4   border-rose-600  rounded-t-3xl lg:rounded-t-full  shadow-inner px-1">
+    <footer className="footer p-10 bg-gray-900 text-white mx-auto flex  justify-evenly border-t-2 rounded-t-[50px] md:rounded-t-[100px]  shadow-md md:shadow-xl px-1">
     
       <div className="mr-8">
         <div className="avatar">
@@ -12,7 +12,7 @@ const Footer = () => {
             <img src={logo} alt='logo'/>
           </div>
         </div>
-        <p>Learn Bangla Language<br/>Providing reliable tech since 1992</p>
+        <p>Learning Bangla is<br/>Easier Now !!</p>
       </div> 
       <div className="flex flex-col">
         <span className="footer-title mb-2">Services</span> 
