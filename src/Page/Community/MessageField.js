@@ -22,7 +22,7 @@ const MessageField = ({refetch}) => {
        
       }).format(dateTime);
     }
-      const messageInfo = {
+      const messageInfo = { 
         message:data.message,
         userName:user?.displayName,
         userEmail:user?.email,
@@ -38,8 +38,11 @@ const MessageField = ({refetch}) => {
           })
           .then(res=> res.json())
           .then(result => {
-            refetch()
-            event.target.reset()
+           
+              refetch()
+              event.target.reset()
+            
+            
           })
 
   }

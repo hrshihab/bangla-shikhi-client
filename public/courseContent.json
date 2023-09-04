@@ -1,0 +1,382 @@
+[
+  
+  {
+    "id": 1,
+    "title": "Milestone 1: Welcome to Bangla Course",
+    "totalTopics": 8,
+    "estimatedCompletionTime": "1 week",
+    "nextTopicId": 2,
+    "prevTopicId": null,
+    "subtopics": [
+      {
+        "id": 11,
+        "title": "Orientation Introduction",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "10 minutes",
+        "nextTopicId": 12,
+        "prevTopicId": null
+      },
+      {
+        "id": 12,
+        "title": "How to Get the Best Out of This Course Strategy",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 13,
+        "prevTopicId": 11
+      },
+      {
+        "id": 13,
+        "title": "Everything You Need to Know About Assignments/Quizzes",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 14,
+        "prevTopicId": 12
+      },
+      {
+        "id": 14,
+        "title": "Best Way to Get Support from This Course",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "10 minutes",
+        "nextTopicId": 15,
+        "prevTopicId": 13
+      },
+      {
+        "id": 15,
+        "title": "How to Use Community Groups to Get Help Effectively",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 16,
+        "prevTopicId": 14
+      },
+      {
+        "id": 16,
+        "title": "How to Get the Best Out of This Course",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "10 minutes",
+        "nextTopicId": 17,
+        "prevTopicId": 15
+      },
+      {
+        "id": 17,
+        "title": "Module Summary and Next Steps",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "10 minutes",
+        "nextTopicId": 18,
+        "prevTopicId": 16
+      },
+      {
+        "id": 18,
+        "title": "Bangla Vocabulary Introduction",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 21,
+        "prevTopicId": 17
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Milestone 2: Bangla Basics",
+    "totalTopics": 6,
+    "estimatedCompletionTime": "1-2 weeks",
+    "nextTopicId": 3,
+    "prevTopicId": 1,
+    "subtopics": [
+      {
+        "id": 21,
+        "title": "Introduction to the Bengali Alphabet",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 22,
+        "prevTopicId": 21
+      },
+      {
+        "id": 22,
+        "title": "Bangla Vowels and Consonants",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 23,
+        "prevTopicId": 21
+      },
+      {
+        "id": 23,
+        "title": "Simple Words and Phrases",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 24,
+        "prevTopicId": 22
+      },
+      {
+        "id": 24,
+        "title": "Greetings and Common Expressions",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 25,
+        "prevTopicId": 23
+      },
+      {
+        "id": 25,
+        "title": "Basic Numbers and Counting",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "15 minutes",
+        "nextTopicId": 26,
+        "prevTopicId": 24
+      },
+      {
+        "id": 26,
+        "title": "Quiz: Milestone 1 Assessment",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 31,
+        "prevTopicId": 25
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Milestone 3: Building Sentences",
+    "totalTopics": 6,
+    "estimatedCompletionTime": "1-2 weeks",
+    "nextTopicId": 4,
+    "prevTopicId": 2,
+    "subtopics": [
+      {
+        "id": 31,
+        "title": "Forming Simple Sentences",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 32,
+        "prevTopicId": 26
+      },
+      {
+        "id": 32,
+        "title": "Expanding Sentences",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 33,
+        "prevTopicId": 31
+      },
+      {
+        "id": 33,
+        "title": "Using Questions in Sentences",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 34,
+        "prevTopicId": 32
+      },
+      {
+        "id": 34,
+        "title": "Expressing Desires and Needs",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 35,
+        "prevTopicId": 33
+      },
+      {
+        "id": 35,
+        "title": "Common Sentence Structures",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 36,
+        "prevTopicId": 34
+      },
+      {
+        "id": 36,
+        "title": "Quiz: Milestone 2 Assessment",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 41,
+        "prevTopicId": 35
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Milestone 4: Expanding Your Vocabulary",
+    "totalTopics": 6,
+    "estimatedCompletionTime": "1-2 weeks",
+    "nextTopicId": 5,
+    "prevTopicId": 3,
+    "subtopics": [
+      {
+        "id": 41,
+        "title": "Common Everyday Words",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 42,
+        "prevTopicId": 36
+      },
+      {
+        "id": 42,
+        "title": "Exploring Advanced Vocabulary",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 43,
+        "prevTopicId": 41
+      },
+      {
+        "id": 43,
+        "title": "Using Synonyms and Antonyms",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 44,
+        "prevTopicId": 42
+      },
+      {
+        "id": 44,
+        "title": "Specialized Vocabulary for Various Topics",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 45,
+        "prevTopicId": 43
+      },
+      {
+        "id": 45,
+        "title": "Building Vocabulary Through Reading and Practice",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 46,
+        "prevTopicId": 44
+      },
+      {
+        "id": 46,
+        "title": "Quiz: Milestone 4 Assessment",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 51,
+        "prevTopicId": 45
+      }
+    ]
+  
+  },
+  {
+    "id": 5,
+    "title": "Milestone 5: Conversational Skills",
+    "totalTopics": 6,
+    "estimatedCompletionTime": "1-2 weeks",
+    "nextTopicId": 6,
+    "prevTopicId": 4,
+    "subtopics": [
+      {
+        "id": 51,
+        "title": "Greetings and Social Etiquette",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 52,
+        "prevTopicId": 46
+      },
+      {
+        "id": 52,
+        "title": "Small Talk and Everyday Conversations",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 53,
+        "prevTopicId": 51
+      },
+      {
+        "id": 53,
+        "title": "Handling Common Situations",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 54,
+        "prevTopicId": 52
+      },
+      {
+        "id": 54,
+        "title": "Expressing Opinions and Desires",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 55,
+        "prevTopicId": 53
+      },
+      {
+        "id": 55,
+        "title": "Effective Communication Strategies",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 56,
+        "prevTopicId": 54
+      },
+      {
+        "id": 56,
+        "title": "Quiz: Milestone 5 Assessment",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "20 minutes",
+        "nextTopicId": 61,
+        "prevTopicId": 55
+      }
+    ]
+  },
+  {
+"id": 6,
+"title": "Milestone 6: Cultural Insights",
+"totalTopics": 5,
+"estimatedCompletionTime": "1-2 weeks",
+"nextTopicId": 7,
+"prevTopicId": 5,
+"subtopics": [
+  {
+    "id": 61,
+    "title": "Exploring Bangladeshi Culture",
+    "totalTopics": 0,
+    "estimatedCompletionTime": "20 minutes",
+    "nextTopicId": 62,
+    "prevTopicId": 56
+  },
+  {
+    "id": 62,
+    "title": "Traditional Customs and Celebrations",
+    "totalTopics": 0,
+    "estimatedCompletionTime": "20 minutes",
+    "nextTopicId": 63,
+    "prevTopicId": 61
+  },
+  {
+    "id": 63,
+    "title": "Cuisine and Food Traditions",
+    "totalTopics": 0,
+    "estimatedCompletionTime": "20 minutes",
+    "nextTopicId": 64,
+    "prevTopicId": 62
+  },
+  {
+    "id": 64,
+    "title": "Art, Music, and Literature",
+    "totalTopics": 0,
+    "estimatedCompletionTime": "20 minutes",
+    "nextTopicId": 65,
+    "prevTopicId": 63
+  },
+  {
+    "id": 65,
+    "title": "Cultural Etiquette and Respect",
+    "totalTopics": 0,
+    "estimatedCompletionTime": "20 minutes",
+    "nextTopicId": 71,
+    "prevTopicId": 64
+  }
+]
+}
+              
+  ,
+  {
+    "id": 7,
+    "title": "Milestone 7: Final Assessment",
+    "totalTopics": 1,
+    "estimatedCompletionTime": "1 week",
+    "nextTopicId": null,
+    "prevTopicId": 6,
+    "subtopics": [
+      {
+        "id": 71,
+        "title": "Comprehensive Course Assessment",
+        "totalTopics": 0,
+        "estimatedCompletionTime": "1 hour",
+        "nextTopicId": null,
+        "prevTopicId": 65
+      }
+    ]
+  }
+
+]
+

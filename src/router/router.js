@@ -6,6 +6,7 @@ import Community from "../Page/Community/Community";
 import Lessons from "../Page/Lessons/Lessons/Lessons";
 import Login from "../Page/Login/Login/Login";
 import SignUp from "../Page/Login/SignUp/SignUp";
+import Error from "../Page/Shared/Error/Error";
 import Profile from "../Page/Shared/Profile/Profile";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     path:'/',
     element:<Main></Main>,
+    errorElement: <Error></Error>,
     children:[
       {
         path:'/',

@@ -34,6 +34,7 @@ const Loading = () => {
         <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
         <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
     </div>
+    
     <span className="sr-only">Loading...</span>
 </div>
 

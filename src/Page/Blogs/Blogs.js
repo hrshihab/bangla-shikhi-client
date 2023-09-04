@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bgImage from './../../assets/abstract-fluid-art-colors-free-vector.jpg'
 import CrudModal from './BlogWrite';
 import { Link } from 'react-router-dom';
@@ -8,18 +8,39 @@ import BlogCard from './BlogCard';
 import CardSkeleton from '../Shared/Loading/CardSkeleton';
 
 const Blogs = () => {
+  const [page, setPage] = useState(0);
+  const [size, setSize] = useState(6);
+  const [count, setCount] = useState(0);
+
+
+  console.log(count);
+
 
 const {data : blogs = [],isLoading,refetch} = useQuery({
-  queryKey:['blogs'],
+  queryKey:['blogs',page,size],
   queryFn: async()=> {
-    const res = await fetch('http://localhost:5000/blogs')
+    const res = await fetch(`http://localhost:5000/blogs?page=${page}&size=${size}`)
     const data = await res.json();
-    return data;
+    console.log(data);
+    
+    setCount(data.count)
+    return data.result;
     
   }
 })
 
+const pages = Math.ceil(count / size);
 
+
+if(isLoading){
+  return  <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+
+   
+  <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+   <CardSkeleton></CardSkeleton>
+/</div>
+</div>
+}
 
 
   return (
@@ -98,41 +119,30 @@ const {data : blogs = [],isLoading,refetch} = useQuery({
         </div>
     </div>
 
-    <nav  className='flex justify-center py-5 mb-5'>
+     <nav  className='flex justify-center py-5 mb-5'>
   <ul className="flex items-center -space-x-px h-8 text-sm">
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        <span className="sr-only">Previous</span>
-        <svg className="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-        </svg>
-      </Link>
-    </li>
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</Link>
-    </li>
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</Link>
-    </li>
-    <li>
-      <Link to="#" aria-current="page" className="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</Link>
-    </li>
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</Link>
-    </li>
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</Link>
-    </li>
-    <li>
-      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-        <span className="sr-only">Next</span>
-        <svg className="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-        </svg>
-      </Link>
-    </li>
+    
+  {
+                    [...Array(pages).keys()].map(number =>
+                    
+                    <li> 
+                      <Link to="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                      
+                       <button
+                        key={number}
+                        className={page === number ? 'selected' : ''}
+                        
+                        onClick={() => setPage(number)}
+                    >
+                        {number + 1}
+                    </button></Link></li>)
+
+
+                }
+
+   
   </ul>
-  <select id="countries" className="ml-6 bg-gray-50 h-8   border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500  px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <select onChange={event => setSize(event.target.value)} className="ml-6 bg-gray-50 h-8   border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500  px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
   <option selected>6</option>
   <option value="10">10</option>
   <option value="15">15</option>
@@ -140,6 +150,7 @@ const {data : blogs = [],isLoading,refetch} = useQuery({
   <option value="30">30</option>
 </select>
 </nav>
+
   </section>
   );
 };

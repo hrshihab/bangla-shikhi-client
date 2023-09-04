@@ -21,7 +21,7 @@ class App extends Component {
 
   setText = () => {
     const texts = [
-      `বাংলা ভাষা আমার পছন্দের ভাষা।`
+      `হার মেনো না আজকের দিনটা হতে পারে কঠিন, আগামী দিনটা আরোও কঠিন হতে পারে, কিন্তু পরের দিন নতুন সূর্য উঠবেই।`
     ];
     const text = texts[Math.floor(Math.random() * texts.length)];
     const words = text.split(" ");
@@ -269,7 +269,7 @@ class App extends Component {
     <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Type the <span class="text-transparent bg-clip-text bg-gradient-to-r to-orange-400 from-pink-500"> text below</span> </h5>
     <progress className="progress progress-info sm:w-72 lg:w-96" value={progress} max="100"></progress>
 
-    <p  className=" my-5 text-gray-600 font-medium leading-relaxed  tracking-wider sm:text-lg dark:text-gray-400">
+    <p  className=" my-5 max-w-md text-gray-600 font-medium leading-relaxed  tracking-wider sm:text-lg dark:text-gray-400">
             {text.split(" ").map((word, w_idx) => {
               let highlight = false;
               let currentWord = false;
@@ -287,10 +287,11 @@ class App extends Component {
                 <span
                   className={`word 
                                 ${highlight && "green"} 
-                                ${currentWord && "underline"}`}
+                                ${currentWord && "underline"} max-w-md`}
                   key={w_idx}
                 >
                   {word.split("").map((letter, l_idx) => {
+                    console.log(letter)
                     const isCurrentWord = w_idx === completedWords.length;
                     const isWronglyTyped = letter !== inputValue[l_idx];
                     const shouldBeHighlighted = l_idx < inputValue.length;

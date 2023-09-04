@@ -6,6 +6,7 @@ import dp from './../../../assets/userProfile.jpg'
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   const handleLogOut = () => {
     logOut()
         .then(() => { })
@@ -118,7 +119,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/collection"
                   class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   ><svg
                     class="mr-2 w-5 h-5 text-gray-400"

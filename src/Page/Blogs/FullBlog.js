@@ -9,7 +9,7 @@ const FullBlog = () => {
   const {data:blog= [],isLoading} = useQuery({
     queryKey:['blog',id],
     queryFn: async() => {
-      const res = await fetch(`http://localhost:5000/blog/${id}`)
+      const res = await fetch(`https://bangla-shikhi-server.vercel.app/blog/${id}`)
       const data = res.json();
       return data
 

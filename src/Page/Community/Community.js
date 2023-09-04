@@ -5,6 +5,7 @@ import CardSkeleton from '../Shared/Loading/CardSkeleton';
 import { AuthContext } from '../../contexts/AuthProvider';
 import MessageBubbleSender from './MessageBubbleSender';
 import MessageBubbleReceiver from './MessageBubbleReceiver';
+import Loading from '../Shared/Loading/Loading';
 
 const Community = () => {
   const { user } = useContext(AuthContext);
@@ -27,7 +28,7 @@ const Community = () => {
   }, [messages]);
 
   if (isLoading) {
-    return <CardSkeleton></CardSkeleton>;
+    return <Loading></Loading>;
   }
 
   return (
