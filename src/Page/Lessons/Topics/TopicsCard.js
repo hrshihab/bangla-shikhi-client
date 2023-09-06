@@ -23,7 +23,7 @@ const TopicsCard = ({content,handleDetails}) => {
             <ul  class=" py-2 rounded-lg mb-2 bg-slate-50 space-y-2">
                {
                   subtopics.map((topic,idx)=><li>
-                     <a href="#" onClick={()=> handleDetails(topic.id)} class=" flex items-center w-full p-2 text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-600 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"> {id}-{idx} : {topic?.title}</a>
+                     <a  onClick={()=> handleDetails(topic.id)} class="hover:cursor-pointer flex items-center w-full p-2 text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-600 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"> {id}-{idx} : {topic?.title}</a>
                   </li> )
                }
                 

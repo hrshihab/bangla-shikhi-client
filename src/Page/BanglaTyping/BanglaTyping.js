@@ -21,7 +21,7 @@ class App extends Component {
 
   setText = () => {
     const texts = [
-      `হার মেনো না আজকের দিনটা হতে পারে কঠিন, আগামী দিনটা আরোও কঠিন হতে পারে, কিন্তু পরের দিন নতুন সূর্য উঠবেই।`
+      `হার মেনো না আজকের দিনটা হতে পারে কঠিন, আগামী দিনটা আরোও কঠিন হতে পারে, কিন্তু  নতুন সূর্য উঠবেই।`
     ];
     const text = texts[Math.floor(Math.random() * texts.length)];
     const words = text.split(" ");
@@ -291,7 +291,7 @@ class App extends Component {
                   key={w_idx}
                 >
                   {word.split("").map((letter, l_idx) => {
-                    console.log(letter)
+                    //console.log(letter)
                     const isCurrentWord = w_idx === completedWords.length;
                     const isWronglyTyped = letter !== inputValue[l_idx];
                     const shouldBeHighlighted = l_idx < inputValue.length;

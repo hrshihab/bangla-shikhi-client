@@ -32,15 +32,6 @@ const {data : blogs = [],isLoading,refetch} = useQuery({
 const pages = Math.ceil(count / size);
 
 
-if(isLoading){
-  return  <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-
-   
-  <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-   <CardSkeleton></CardSkeleton>
-/</div>
-</div>
-}
 
 
   return (
@@ -104,19 +95,30 @@ if(isLoading){
 </ul>
 
     <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-
+       
+    {isLoading ? 
+              <div className='max-w-screen-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between mx-auto'> 
+                  <CardSkeleton></CardSkeleton>
+                  <CardSkeleton></CardSkeleton> 
+                  <CardSkeleton></CardSkeleton>
+              </div>
+                 
+           
+            
+            :
    
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
            {
+              
             blogs.map((blog,i)=> <BlogCard
             blog={blog}
             key={blog._id}
             isLoading={isLoading}
 
-            ></BlogCard>)
+            ></BlogCard>) 
            }
                
-        </div>
+        </div>}
     </div>
 
      <nav  className='flex justify-center py-5 mb-5'>
