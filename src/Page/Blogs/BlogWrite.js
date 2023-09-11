@@ -52,6 +52,7 @@ const BlogWrite = () => {
             image:imgData.data.url,
             description:data.description,
             dateTime:formatDate(dateTime),
+            status:'pending',
             userName:user?.displayName,
             userEmail:user?.email,
             userPhoto:user?.photoURL

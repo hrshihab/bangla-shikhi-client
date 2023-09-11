@@ -24,7 +24,8 @@ const {data : blogs = [],isLoading,refetch} = useQuery({
     console.log(data);
     
     setCount(data.count)
-    return data.result;
+    const displayBlogs = data.result.filter(blog=> blog.status !== 'pending')
+    return displayBlogs;
     
   }
 })

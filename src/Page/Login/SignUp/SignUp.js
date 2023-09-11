@@ -24,9 +24,19 @@ const SignUp = () => {
                 const userInfo = {
                     displayName: data.name
                 }
-                navigate('/');
+               
                 updateUser(userInfo)
                     .then(() => {
+                        const userDetails = {
+                            displayName:data.name,
+                            email:data.email,
+                            photoURL:"",
+                            role:'viewer',
+                            accountType:"basic",
+                            blogs:0,
+                            emailVerified:""
+                        }
+                        saveUser(userDetails);
                     })
                     .catch(err => console.log(err));
             })
@@ -35,6 +45,22 @@ const SignUp = () => {
                 setSignUpError(error.message)
             });
   }
+  const saveUser = (user) =>{
+    
+    fetch('http://localhost:5000/users', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res => res.json())
+    .then(data =>{
+        setCreatedUserEmail(user.email);
+        console.log(setCreatedUserEmail);
+        navigate('/');
+    })
+}
   return (
     <div className='py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 grid-cols-1 grid md:grid-cols-2 '>
       <img className=' hidden md:grid ' src={image1} alt="" />
