@@ -5,8 +5,9 @@ import FullBlog from "../Page/Blogs/FullBlog";
 import Community from "../Page/Community/Community";
 import AdminDashboard from "../Page/Dashboard/AdminDashboard/AdminDashboard";
 import AllBlogs from "../Page/Dashboard/AllBlogs/AllBlogs";
+import BlogsApproved from "../Page/Dashboard/AllBlogs/BlogsApproved";
 import AllUsers from "../Page/Dashboard/AllUsers/AllUsers";
-import BlogsApproval from "../Page/Dashboard/BlogsApproval/BlogsApproval";
+import BlogsPending from "../Page/Dashboard/BlogsPending/BlogsPending";
 import Dashboard from "../Page/Dashboard/Dashboard/Dashboard";
 import MyBlogs from "../Page/Dashboard/MyBlogs/MyBlogs";
 import Lessons from "../Page/Lessons/Lessons/Lessons";
@@ -18,6 +19,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import AdminRoute from "./AdminRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
+import LessonsUpdate from '../Page/Dashboard/Lessons/Lessons/LessonsUpdate'
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../layout/Main");
 const { default: Home } = require("../Page/Home/Home/Home");
@@ -72,7 +74,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/dashboard',
-    element: <PrivateRoute><AdminRoute><DashboardLayout></DashboardLayout></AdminRoute></PrivateRoute>,
+    element: <AdminRoute><DashboardLayout></DashboardLayout></AdminRoute>,
     children:[
       {
         path:'/dashboard',
@@ -87,16 +89,16 @@ const router = createBrowserRouter([
         element:<AdminRoute><AllUsers></AllUsers></AdminRoute>,
       },
       {
-        path:'/dashboard/allblogs',
-        element:<AdminRoute><AllBlogs></AllBlogs></AdminRoute>
+        path:'/dashboard/blogsapproved',
+        element:<AdminRoute><BlogsApproved></BlogsApproved></AdminRoute>
       },
       {
-        path:'/dashboard/blogsapproval',
-        element:<AdminRoute><BlogsApproval></BlogsApproval></AdminRoute>
+        path:'/dashboard/blogspending',
+        element:<AdminRoute><BlogsPending></BlogsPending></AdminRoute>
       },
       {
-        path:'/dashboard/myblogs',
-        element:<AdminRoute><MyBlogs></MyBlogs></AdminRoute>
+        path:'/dashboard/lessons',
+        element:<AdminRoute><LessonsUpdate></LessonsUpdate></AdminRoute>
       }
     ]
   }

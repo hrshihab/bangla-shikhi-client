@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import normalUser from './../../../assets/userProfileNormal.png'
+import adminAvatar from './../../../assets/adminAvatar.png'
 
 const UserCard = ({userData,handleMakeAdmin,handleRemoveAdmin}) => {
   const {displayName,email,photoURL,role,accountType,_id:id} = userData
   const {user} = useContext(AuthContext)
+  
   return (
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               
     <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-        <img class="w-10 h-10 rounded-full" src={photoURL} alt={displayName}/>
+        <img class="w-10 h-10 rounded-full" src={userData?.photoURL?photoURL: role==='admin'? adminAvatar : normalUser} alt={displayName}/>
         <div class="pl-3">
             <div class="text-base font-semibold">{displayName}</div>
             <div class="font-normal text-gray-500">{email}</div>

@@ -47,7 +47,7 @@ theme: {
 ]
   }
 },
-  plugins: [require("daisyui"),require('flowbite/plugin')],
+  plugins: [ require('@tailwindcss/aspect-ratio'),require("daisyui"),require('flowbite/plugin')],
   
 }
   

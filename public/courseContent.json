@@ -1,382 +1,127 @@
 [
+    {
+      "id": 1, "title": "Milestone 1: Welcome to Bangla Course", "totalTopics": 8, "estimatedCompletionTime": "1 week", "nextTopicId": 2, "prevTopicId": null,
+      "subtopics": [
+                    { "id": 101, "type": "text", "title": "Orientation Introduction",                               "totalTopics": 0, "estimatedCompletionTime": "10 minutes",  "nextTopicId": 102, "prevTopicId": 101 },
+                    { "id": 102, "type": "text", "title": "How to Get the Best Out of This Course Strategy",        "totalTopics": 0, "estimatedCompletionTime": "15 minutes",  "nextTopicId": 103,"prevTopicId": 101},
+                    { "id": 103, "type": "text", "title": "Everything You Need to Know About Assignments/Quizzes", "totalTopics": 0, "estimatedCompletionTime": "15 minutes",  "nextTopicId": 104, "prevTopicId": 102 },
+                    { "id": 104, "type": "text", "title": "About Typing bangla Section",                           "totalTopics": 0, "estimatedCompletionTime": "10 minutes",  "nextTopicId": 105, "prevTopicId": 103 },
+                    { "id": 105, "type": "text", "title": "About Community Chatting Section",                      "totalTopics": 0, "estimatedCompletionTime": "10 minutes",  "nextTopicId": 106, "prevTopicId": 104 },
+                    { "id": 106, "type": "text", "title": "How to Use Community Blogs to Get Help Effectively",    "totalTopics": 0, "estimatedCompletionTime": "15 minutes",  "nextTopicId": 107,  "prevTopicId": 105 },
+                    { "id": 107, "type": "text", "title": "Module Summary and Next Steps",                         "totalTopics": 0, "estimatedCompletionTime": "10 minutes",  "nextTopicId": 201, "prevTopicId": 106 }
+                  ]
+    },
+    {
+      "id": 2, "title": "Milestone 2: Bangla Basics", "totalTopics": 30, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 3,"prevTopicId": 1,
+      "subtopics": [ 
+                     { "id": 201, "type": "text", "activeStatus":false, "title": "Introduction to the Bengali Alphabet",  "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 202, "prevTopicId": 108 },
+                     { "id": 202, "type": "letter", "activeStatus":false, "title": "Vowels Day 1",                          "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 203, "prevTopicId": 201 },
+                     { "id": 203, "type": "letter", "activeStatus":false, "title": "Vowels Day 2",                          "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 204, "prevTopicId": 202 },
+                     { "id": 204, "type": "video", "activeStatus":false, "link":"https://www.youtube.com/embed/JXTg-lbwKpc?si=32w5OB_TskqSM47G","title": "Vowels",                          "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 204, "prevTopicId": 202 },
+                     { "id": 205, "type": "pdf", "activeStatus":false, "link":"https://ku.ac.bd/uploads/kustudies/Vol%209/N1/9-16.pdf", "title": "Advanced Vowels comparison English-Bengali",  "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 202, "prevTopicId": 108 },
+                     { "id": 206,  "type":"exercise", "activeStatus":false, "title": "Vowels Exercise",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 205, "prevTopicId": 203 },
+                     { "id": 207, "type": "letter", "activeStatus":false, "title": "Consonant Day 1",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 206, "prevTopicId": 204 },
+                     { "id": 208, "type": "letter","activeStatus":false,  "title": "Consonant Day 2",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 207, "prevTopicId": 205 },
+                     { "id": 209, "type": "letter", "activeStatus":false, "title": "Consonant Day 3",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 208, "prevTopicId": 206 },
+                     { "id": 210, "type": "letter", "activeStatus":false, "title": "Consonant Day 4",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 209, "prevTopicId": 207 },
+                     { "id": 211, "type":"exercise", "activeStatus":false,  "title": "Consonant Exercise 1",                  "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 210, "prevTopicId": 208 },
+                     { "id": 212, "type": "letter", "activeStatus":false, "title": "Consonant Day 5",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 211, "prevTopicId": 209 },
+                     { "id": 213, "type": "letter", "activeStatus":false, "title": "Consonant Day 6",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 212, "prevTopicId": 210 },
+                     { "id": 214, "type": "letter", "activeStatus":false, "title": "Consonant Day 7",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 213, "prevTopicId": 211 },
+                     { "id": 215, "type": "letter", "activeStatus":false, "title": "Consonant Day 8",                       "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 214, "prevTopicId": 212 },
+                     { "id": 216, "type":"exercise", "activeStatus":false, "title": "Consonant Exercise 2",                  "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 215, "prevTopicId": 213 },
+                     { "id": 217, "type": "letter", "activeStatus":false, "title": "Vowel Diacritics Day 1",                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 216, "prevTopicId": 214 },
+                     { "id": 218, "type": "letter", "activeStatus":false,"title": "Vowel Diacritics Day 2",                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 217, "prevTopicId": 215 },
+                     { "id": 219, "type":"exercise", "activeStatus":false, "title": "Vowel Diacritics Exercise",             "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 218, "prevTopicId": 216 },
+                     { "id": 220, "type": "letter", "activeStatus":false, "title": "Consonant Diacritics",                  "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 219, "prevTopicId": 217 },
+                     { "id": 220, "type":"exercise", "activeStatus":false, "title": "Consonant Diacritics Exercise",         "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 220, "prevTopicId": 218 },
+                     { "id": 221, "type":"conjuct", "activeStatus":false, "title": "Consonant Conjuct Day 1",               "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 221, "prevTopicId": 219 },
+                     { "id": 222, "type":"conjuct", "activeStatus":false, "title": "Consonant Conjuct Day 2",               "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 222, "prevTopicId": 220 },
+                     { "id": 223, "type":"conjuct", "activeStatus":false, "title": "Consonant Conjuct Day 3",               "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 223, "prevTopicId": 221 },
+                     { "id": 224, "type":"conjuct", "activeStatus":false, "title": "Consonant Conjuct Day 4",               "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 224, "prevTopicId": 222 },
+                     { "id": 225, "type":"exercise", "activeStatus":false, "title": "Consonant Conjuct Exercise",            "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 225, "prevTopicId": 223 },
+                     { "id": 226, "type": "letter", "activeStatus":false, "title": "Numbers Counting Day 1",                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 226, "prevTopicId": 224 },
+                     { "id": 227, "type": "letter", "activeStatus":false, "title": "Numbers Counting Day 2",                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 227, "prevTopicId": 225 },
+                     { "id": 228, "type": "letter", "activeStatus":false, "title": "Numbers Counting Day 3",                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 228, "prevTopicId": 226 },
+                     { "id": 229, "type": "letter", "activeStatus":false, "title": "Numbers Counting Exercise",             "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 229, "prevTopicId": 227 },
+                     { "id": 230, "type": "text", "activeStatus":false, "title": "Rest Day",                              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 301, "prevTopicId": 228 }
+                    ]
+    },
+    {
+      "id": 3, "title": "Milestone 3: Two Letter Sound & Words","totalTopics": 19, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 4, "prevTopicId": 2,
+      "subtopics": [ 
+                      { "id": 301, "title": "Conso. Letter Sound with Vowel Diacr. 1",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 302, "prevTopicId": 229 },
+                      { "id": 302, "title": "Conso. Letter Sound with Vowel Diacr. 2",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 303, "prevTopicId": 301 },
+                      { "id": 303, "title": "Conso. Letter Sound with Vowel Diacr. 3",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 304, "prevTopicId": 302 },
+                      { "id": 304, "title": "Conso. Letter Sound with Vowel Diacr. 4",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 305, "prevTopicId": 303 },
+                      { "id": 305, "title": "Conso. Letter Sound with Vowel Diacr. 5",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 306, "prevTopicId": 304 },
+                      { "id": 306, "title": "Conso. Letter Sound with Vowel Diacr. Exercises: 1",   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 307, "prevTopicId": 305 },
+                      { "id": 307, "title": "Conso. Letter Sound with Vowel Diacr. 6",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 308, "prevTopicId": 306 },
+                      { "id": 308, "title": "Conso. Letter Sound with Vowel Diacr. 7",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 309, "prevTopicId": 307 },
+                      { "id": 309, "title": "Conso. Letter Sound with Vowel Diacr. 8",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 310, "prevTopicId": 308 },
+                      { "id": 310, "title": "Conso. Letter Sound with Vowel Diacr. 9",              "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 311, "prevTopicId": 309 },
+                      { "id": 311, "title": "Conso. Letter Sound with Vowel Diacr. 10",             "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 312, "prevTopicId": 310 },
+                      { "id": 312, "title": "Conso. Letter Sound with Vowel Diacr. Exercises: 2",   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 313, "prevTopicId": 311 },
+                      { "id": 313, "title": "Simple Words Day 1",                                   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 314, "prevTopicId": 312 },
+                      { "id": 314, "title": "Simple Words Day 3",                                   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 315, "prevTopicId": 313 },
+                      { "id": 315, "title": "Simple Words Day 4",                                   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 316, "prevTopicId": 314 },
+                      { "id": 316, "title": "Simple Words Day 5",                                   "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 317, "prevTopicId": 315 },
+                      { "id": 317, "title": "Simple Words Exercise",                                "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 318, "prevTopicId": 316 },
+                      { "id": 318, "title": "7 Days Name ",                                         "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 319, "prevTopicId": 317 },
+                      { "id": 319, "title": "Rest Day",                                             "totalTopics": 0, "estimatedCompletionTime": "15 minutes", "nextTopicId": 401, "prevTopicId": 318 }
+                    ]
+    },
+    {
+      "id": 4, "title": "Milestone 4: Sentences and Phrases", "totalTopics": 7, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 5, "prevTopicId": 3,
+      "subtopics": [
+                    { "id": 401,  "title": "Greetings and Common Expressions",   "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 402, "prevTopicId": 319 },
+                    { "id": 402,  "title": "Forming Simple Sentences",           "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 403, "prevTopicId": 401},
+                    { "id": 403,  "title": "Expanding Sentences",                "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 404, "prevTopicId": 402 },
+                    { "id": 404,  "title": "Using Questions in Sentences",       "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 405, "prevTopicId": 403},
+                    { "id": 405,  "title": "Expressing Desires and Needs",       "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 406, "prevTopicId": 404 },
+                    { "id": 406,  "title": "Common Sentence Structures",         "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 407, "prevTopicId": 405 },
+                    { "id": 407,  "title": "Quiz: Milestone 2 Assessment",       "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 501, "prevTopicId": 406}
+                  ]
+    },
+    {
+      "id": 5, "title": "Milestone 5: Expanding Your Vocabulary", "totalTopics": 6, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 6, "prevTopicId": 4,
+      "subtopics": [
+                    { "id": 501, "title": "Common Everyday Words",                            "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 502, "prevTopicId": 407 },
+                    { "id": 502, "title": "Exploring Advanced Vocabulary",                    "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 503, "prevTopicId": 501 },
+                    { "id": 503, "title": "Using Synonyms and Antonyms",                      "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 504,  "prevTopicId": 502 },
+                    { "id": 504, "title": "Specialized Vocabulary for Various Topics",        "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 505,  "prevTopicId": 503 },
+                    { "id": 505, "title": "Building Vocabulary Through Reading and Practice", "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 506, "prevTopicId": 504 },
+                    { "id": 506, "title": "Quiz: Milestone 4 Assessment",                     "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 601,  "prevTopicId": 505}
+                  ]
+    
+    },
+    {
+      "id": 6, "title": "Milestone 6: Conversational Skills", "totalTopics": 6, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 7, "prevTopicId": 5,
+      "subtopics": [
+                    { "id": 601, "title": "Greetings and Social Etiquette",        "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 602, "prevTopicId": 506 },
+                    { "id": 602, "title": "Small Talk and Everyday Conversations", "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 603, "prevTopicId": 601},
+                    { "id": 603, "title": "Handling Common Situations",            "totalTopics": 0, "estimatedCompletionTime": "20 minutes",  "nextTopicId": 604, "prevTopicId": 602 },
+                    { "id": 604, "title": "Expressing Opinions and Desires",       "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 605, "prevTopicId": 603 },
+                    { "id": 605, "title": "Effective Communication Strategies",    "totalTopics": 0, "estimatedCompletionTime": "20 minutes",  "nextTopicId": 606,  "prevTopicId": 604 },
+                    { "id": 606, "title": "Quiz: Milestone 5 Assessment",          "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 701, "prevTopicId": 605 }
+                  ]
+    },
+    {
+      "id": 7, "title": "Milestone 7: Cultural Insights", "totalTopics": 5, "estimatedCompletionTime": "1-2 weeks", "nextTopicId": 8,  "prevTopicId": 6,
+      "subtopics": [
+                    { "id": 701, "title": "Exploring Bangladeshi Culture",        "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 702, "prevTopicId": 606 },
+                    { "id": 702, "title": "Traditional Customs and Celebrations", "totalTopics": 0,"estimatedCompletionTime": "20 minutes","nextTopicId": 703, "prevTopicId": 701 },
+                    { "id": 703, "title": "Cuisine and Food Traditions",          "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 704, "prevTopicId": 702 },
+                    { "id": 704, "title": "Art, Music, and Literature",           "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 705, "prevTopicId": 703 },
+                    { "id": 705, "title": "Cultural Etiquette and Respect",       "totalTopics": 0, "estimatedCompletionTime": "20 minutes", "nextTopicId": 801,"prevTopicId": 704}
+                  ]
+  },
+    {
+      "id": 8, "title": "Milestone 8: Final Assessment", "totalTopics": 1, "estimatedCompletionTime": "1 week", "nextTopicId": 8, "prevTopicId": 7,
+      "subtopics": [
+                    { "id": 801, "title": "Comprehensive Course Assessment", "totalTopics": 0, "estimatedCompletionTime": "1 hour", "nextTopicId": 801,  "prevTopicId": 705 }
+                  ]
+    }
+  ]
   
-  {
-    "id": 1,
-    "title": "Milestone 1: Welcome to Bangla Course",
-    "totalTopics": 8,
-    "estimatedCompletionTime": "1 week",
-    "nextTopicId": 2,
-    "prevTopicId": null,
-    "subtopics": [
-      {
-        "id": 11,
-        "title": "Orientation Introduction",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "10 minutes",
-        "nextTopicId": 12,
-        "prevTopicId": null
-      },
-      {
-        "id": 12,
-        "title": "How to Get the Best Out of This Course Strategy",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 13,
-        "prevTopicId": 11
-      },
-      {
-        "id": 13,
-        "title": "Everything You Need to Know About Assignments/Quizzes",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 14,
-        "prevTopicId": 12
-      },
-      {
-        "id": 14,
-        "title": "Best Way to Get Support from This Course",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "10 minutes",
-        "nextTopicId": 15,
-        "prevTopicId": 13
-      },
-      {
-        "id": 15,
-        "title": "How to Use Community Groups to Get Help Effectively",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 16,
-        "prevTopicId": 14
-      },
-      {
-        "id": 16,
-        "title": "How to Get the Best Out of This Course",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "10 minutes",
-        "nextTopicId": 17,
-        "prevTopicId": 15
-      },
-      {
-        "id": 17,
-        "title": "Module Summary and Next Steps",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "10 minutes",
-        "nextTopicId": 18,
-        "prevTopicId": 16
-      },
-      {
-        "id": 18,
-        "title": "Bangla Vocabulary Introduction",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 21,
-        "prevTopicId": 17
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Milestone 2: Bangla Basics",
-    "totalTopics": 6,
-    "estimatedCompletionTime": "1-2 weeks",
-    "nextTopicId": 3,
-    "prevTopicId": 1,
-    "subtopics": [
-      {
-        "id": 21,
-        "title": "Introduction to the Bengali Alphabet",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 22,
-        "prevTopicId": 21
-      },
-      {
-        "id": 22,
-        "title": "Bangla Vowels and Consonants",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 23,
-        "prevTopicId": 21
-      },
-      {
-        "id": 23,
-        "title": "Simple Words and Phrases",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 24,
-        "prevTopicId": 22
-      },
-      {
-        "id": 24,
-        "title": "Greetings and Common Expressions",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 25,
-        "prevTopicId": 23
-      },
-      {
-        "id": 25,
-        "title": "Basic Numbers and Counting",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "15 minutes",
-        "nextTopicId": 26,
-        "prevTopicId": 24
-      },
-      {
-        "id": 26,
-        "title": "Quiz: Milestone 1 Assessment",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 31,
-        "prevTopicId": 25
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Milestone 3: Building Sentences",
-    "totalTopics": 6,
-    "estimatedCompletionTime": "1-2 weeks",
-    "nextTopicId": 4,
-    "prevTopicId": 2,
-    "subtopics": [
-      {
-        "id": 31,
-        "title": "Forming Simple Sentences",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 32,
-        "prevTopicId": 26
-      },
-      {
-        "id": 32,
-        "title": "Expanding Sentences",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 33,
-        "prevTopicId": 31
-      },
-      {
-        "id": 33,
-        "title": "Using Questions in Sentences",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 34,
-        "prevTopicId": 32
-      },
-      {
-        "id": 34,
-        "title": "Expressing Desires and Needs",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 35,
-        "prevTopicId": 33
-      },
-      {
-        "id": 35,
-        "title": "Common Sentence Structures",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 36,
-        "prevTopicId": 34
-      },
-      {
-        "id": 36,
-        "title": "Quiz: Milestone 2 Assessment",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 41,
-        "prevTopicId": 35
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Milestone 4: Expanding Your Vocabulary",
-    "totalTopics": 6,
-    "estimatedCompletionTime": "1-2 weeks",
-    "nextTopicId": 5,
-    "prevTopicId": 3,
-    "subtopics": [
-      {
-        "id": 41,
-        "title": "Common Everyday Words",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 42,
-        "prevTopicId": 36
-      },
-      {
-        "id": 42,
-        "title": "Exploring Advanced Vocabulary",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 43,
-        "prevTopicId": 41
-      },
-      {
-        "id": 43,
-        "title": "Using Synonyms and Antonyms",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 44,
-        "prevTopicId": 42
-      },
-      {
-        "id": 44,
-        "title": "Specialized Vocabulary for Various Topics",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 45,
-        "prevTopicId": 43
-      },
-      {
-        "id": 45,
-        "title": "Building Vocabulary Through Reading and Practice",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 46,
-        "prevTopicId": 44
-      },
-      {
-        "id": 46,
-        "title": "Quiz: Milestone 4 Assessment",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 51,
-        "prevTopicId": 45
-      }
-    ]
   
-  },
-  {
-    "id": 5,
-    "title": "Milestone 5: Conversational Skills",
-    "totalTopics": 6,
-    "estimatedCompletionTime": "1-2 weeks",
-    "nextTopicId": 6,
-    "prevTopicId": 4,
-    "subtopics": [
-      {
-        "id": 51,
-        "title": "Greetings and Social Etiquette",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 52,
-        "prevTopicId": 46
-      },
-      {
-        "id": 52,
-        "title": "Small Talk and Everyday Conversations",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 53,
-        "prevTopicId": 51
-      },
-      {
-        "id": 53,
-        "title": "Handling Common Situations",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 54,
-        "prevTopicId": 52
-      },
-      {
-        "id": 54,
-        "title": "Expressing Opinions and Desires",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 55,
-        "prevTopicId": 53
-      },
-      {
-        "id": 55,
-        "title": "Effective Communication Strategies",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 56,
-        "prevTopicId": 54
-      },
-      {
-        "id": 56,
-        "title": "Quiz: Milestone 5 Assessment",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "20 minutes",
-        "nextTopicId": 61,
-        "prevTopicId": 55
-      }
-    ]
-  },
-  {
-"id": 6,
-"title": "Milestone 6: Cultural Insights",
-"totalTopics": 5,
-"estimatedCompletionTime": "1-2 weeks",
-"nextTopicId": 7,
-"prevTopicId": 5,
-"subtopics": [
-  {
-    "id": 61,
-    "title": "Exploring Bangladeshi Culture",
-    "totalTopics": 0,
-    "estimatedCompletionTime": "20 minutes",
-    "nextTopicId": 62,
-    "prevTopicId": 56
-  },
-  {
-    "id": 62,
-    "title": "Traditional Customs and Celebrations",
-    "totalTopics": 0,
-    "estimatedCompletionTime": "20 minutes",
-    "nextTopicId": 63,
-    "prevTopicId": 61
-  },
-  {
-    "id": 63,
-    "title": "Cuisine and Food Traditions",
-    "totalTopics": 0,
-    "estimatedCompletionTime": "20 minutes",
-    "nextTopicId": 64,
-    "prevTopicId": 62
-  },
-  {
-    "id": 64,
-    "title": "Art, Music, and Literature",
-    "totalTopics": 0,
-    "estimatedCompletionTime": "20 minutes",
-    "nextTopicId": 65,
-    "prevTopicId": 63
-  },
-  {
-    "id": 65,
-    "title": "Cultural Etiquette and Respect",
-    "totalTopics": 0,
-    "estimatedCompletionTime": "20 minutes",
-    "nextTopicId": 71,
-    "prevTopicId": 64
-  }
-]
-}
-              
-  ,
-  {
-    "id": 7,
-    "title": "Milestone 7: Final Assessment",
-    "totalTopics": 1,
-    "estimatedCompletionTime": "1 week",
-    "nextTopicId": null,
-    "prevTopicId": 6,
-    "subtopics": [
-      {
-        "id": 71,
-        "title": "Comprehensive Course Assessment",
-        "totalTopics": 0,
-        "estimatedCompletionTime": "1 hour",
-        "nextTopicId": null,
-        "prevTopicId": 65
-      }
-    ]
-  }
-
-]
-

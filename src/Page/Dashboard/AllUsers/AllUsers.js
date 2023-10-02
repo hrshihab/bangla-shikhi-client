@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import UserCard from './UserCard';
 import toast from 'react-hot-toast';
+import MakeUserAdminCard from '../../Shared/Loading/MakeUserAdminCard';
 
 const AllUsers = () => {
     //console.log('ok im here');
@@ -17,6 +18,10 @@ const AllUsers = () => {
           
         }
       })
+
+      if(isLoading) {
+        return <MakeUserAdminCard></MakeUserAdminCard>
+      }
 
       const handleMakeAdmin = id => {
         //console.log(id);
