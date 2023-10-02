@@ -17,29 +17,28 @@ const LessonsUpdate = () => {
    
   
     
-    const handlePreview = (topic) => {
-      setInit(true)
-      setInitialEdit(false)
-      setIsPreview(!isPreview)
-      setIsEdit(false)
-      setSingleLessons(topic)
-     // console.log(isPreview);
+    // const handlePreview = (topic) => {
+    //   setInit(true)
+    //   setInitialEdit(false)
+    //   setIsPreview(!isPreview)
+    //   setIsEdit(false)
+    //   setSingleLessons(topic)
+    //  // console.log(isPreview);
     
-    }
+    // }
+    
+    console.log(isEdit);
     const handleEdit = (topic) => {
-      setInitialEdit(true)
       setIsEdit(!isEdit)
-      setIsPreview(false)   
-      setInit(false)
-      // console.log('handleedit');
+    
       setSingleLessons(topic)
     
     }
 
 const {data:contents = [],isLoading,refetch} = useQuery({
-  queryKey:['Lessons'],
+  queryKey:[],
   queryFn: async () => {
-    const res = await fetch('/courseContent.json')
+    const res = await fetch('http://localhost:5000/coursecontent')
     const data = await res.json()
     //console.log(data);
     return data
@@ -58,16 +57,16 @@ const handleDetails = (topicId) => {
     <div className='py-20'>
      <LessonsTopics
      handleEdit={handleEdit}
-     handlePreview={handlePreview}
+     //handlePreview={handlePreview}
      contents={contents}
      handleDetails={handleDetails}
      isLoading={isLoading}
      ></LessonsTopics>
       {/* <!-- drawer component --> */}
-      {initialEdit && <EditLessons handleEdit={handleEdit} isEdit={isEdit} singleLessons={singleLessons} ></EditLessons>}
+      {<EditLessons handleEdit={handleEdit} isEdit={isEdit} singleLessons={singleLessons} ></EditLessons>}
         {/* <!-- Preview Drawer --> */}
 
-      { init &&
+      {/* { init &&
        
           <PreviewLessons
           isEdit={isEdit}
@@ -76,7 +75,7 @@ const handleDetails = (topicId) => {
       blog={singleLessons}
       
       ></PreviewLessons>
-      }
+      } */}
      
     </div>
   );

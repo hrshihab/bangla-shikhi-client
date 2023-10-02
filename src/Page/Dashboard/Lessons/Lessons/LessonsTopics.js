@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import LessonsTopicsCard from './LessonsTopicsCard';
 
-const LessonsTopics = ({handleDetails,contents,handleEdit,handlePreview}) => {
-console.log(contents.length);
+const LessonsTopics = ({handleDetails,contents,handleEdit}) => {
+//console.log(contents.length);
   
   return (
     <section className='mx-auto '>
@@ -45,10 +45,10 @@ console.log(contents.length);
      {
       contents.map(content=> <LessonsTopicsCard
         handleEdit={handleEdit}
-        handlePreview={handlePreview}
-      key={content.id}
-      content={content}
-      handleDetails = {handleDetails}
+        //handlePreview={handlePreview}
+        key={content.id}
+        content={content}
+        handleDetails = {handleDetails}
       >
 
       </LessonsTopicsCard>)

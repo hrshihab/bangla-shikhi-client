@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SubTopicsCard from './SubTopicsCard';
 
-const LessonsTopicsCard = ({content,handleDetails,handleEdit,handlePreview}) => {
+const LessonsTopicsCard = ({content,handleDetails,handleEdit}) => {
   const {title,totalTopics,id,estimatedCompletionTime,nextTopicId,prevTopicId,subtopics} = content
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +41,7 @@ const LessonsTopicsCard = ({content,handleDetails,handleEdit,handlePreview}) => 
                {
                   subtopics.map((topic,idx)=><SubTopicsCard
                   handleEdit={handleEdit}
-                  handlePreview={handlePreview}
+                  //handlePreview={handlePreview}
                   key={idx}
                   topic={topic}></SubTopicsCard> )
                }
