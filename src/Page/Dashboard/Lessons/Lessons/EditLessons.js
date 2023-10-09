@@ -1,13 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import MakeUserAdminCard from './../../../Shared/Loading/MakeUserAdminCard'
 
 const EditLessons = ({handleEdit,isEdit,setIsPreview,singleLessons}) => {
 
-    const {estimatedCompletionTime,id:topicId,nextTopicId,prevTopicId,type,title,activeStatus} = singleLessons;
     //console.log(title);
     const [isEditable, setIsEditable] = useState(false);
     const [dataLength,setDataLength] = useState(0)
+    const [singleTopic,setSingleTopic] = useState([])
+
+    const {estimatedCompletionTime,id:topicId,nextTopicId,prevTopicId,type,title,activeStatus} = singleLessons;
+
+    //const {estimatedCompletionTime,id:topicId,nextTopicId,prevTopicId,type,title,activeStatus} = sing;
+
 
 
 
@@ -59,12 +65,16 @@ console.log(newArray);
 
 
 
+
 }
 
+
+
+
     const {data:contentsDetails = [],isLoading ,refetch} = useQuery({
-        queryKey:[topicId],
+        queryKey:[topicId,'lessons'],
         queryFn: async () => {
-          const res = await fetch('http://localhost:5000/lessons') 
+          const res = await fetch(`http://localhost:5000/lessons/${topicId}`) 
           const data = await res.json()
           const filtredItem = data.filter(item=> item.topicId === topicId)
           setDataLength(filtredItem.length)
@@ -72,6 +82,29 @@ console.log(newArray);
           return filtredItem
         }
       })
+
+      console.log(contentsDetails);
+
+    //   const {data:contentsTitle = [] } = useQuery({
+    //     queryKey:[],
+    //     queryFn: async () => {
+    //         const res = await fetch('http://localhost:5000/coursecontent')
+    //         const data = await res.json()
+    //         return data
+    //     }
+    //   })
+
+      
+// if(isEdit) {
+//     console.log(Math.round(topicId/100));
+//    const milestoneId = Math.round(topicId/100)
+// const milestone = contentsTitle.find(item=>  milestoneId === item.id )
+// const filterTitle = milestone.subtopics.find(item => topicId === item.id)
+// //console.log(filterTitle);
+// setSingleTopic(filterTitle)
+// }
+
+      //console.log(contentsTitle);
     //console.log(Object.keys(contentsDetails[0]));
   return (
     <form onSubmit={handleSubmit(handleUpdateLessons)} id="drawer-update-product" class={` fixed top-20 left-0 z-40 w-full h-5/6 max-w-3xl p-4 overflow-y-auto transition-transform ${isEdit ? '': "-translate-x-full"} bg-white dark:bg-gray-800`} tabindex="-1" aria-labelledby="drawer-update-product-label" aria-hidden="true">
@@ -85,15 +118,15 @@ console.log(newArray);
     <div class="grid gap-4  ">
         <div class="space-y-4  sm:space-y-6">
             <div>
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title of Topics</label>
-                <input type="text"   name="title"  {...register('title',{required:true})} id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value='df' required=""/>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{title}</label>
+                <input type="text"   name="title"  {...register('title')} id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  placeholder={title} required=""/>
                 {errors.title && <p className='text-red-500'>{errors.title.message}</p>}
 
             </div>
             <div class=" grid sm:grid-cols-3 sm:gap-6 ">
             <div>
                 <label for="product-brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Topic ID</label>
-                <input type="text"  id="product-brand" name='topicId'   {...register('topicId',{required:true })}   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value={topicId} placeholder="Product Brand" required=""/>
+                <input type="text"  id="product-brand" name='topicId'   {...register('topicId',{required:true })}   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" defaultValue={topicId} placeholder="Product Brand" required=""/>
                 {errors.topicId && <p className='text-red-500'>{errors.topicId.message}</p> }
             </div>
             <div><label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type</label><select name='type' {...register('type')} id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"><option selected="">{type}</option><option defaultValue="pdf">PDF</option><option defaultValue="Image">Image</option><option defaultValue="video">Video</option><option defaultValue="exercise">Exercise</option></select></div>
@@ -135,7 +168,10 @@ console.log(newArray);
                 
                 
                 return (
-                    <div  className="w-full gap-1 flex  px-2.5 py-1">
+             
+                    
+                        isLoading ? <MakeUserAdminCard></MakeUserAdminCard>:
+                        <div  className="w-full gap-1 flex  px-2.5 py-1">
                         <input
                             type="text"
                             id={`field-${key}`}

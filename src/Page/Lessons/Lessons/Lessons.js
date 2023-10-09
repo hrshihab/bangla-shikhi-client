@@ -11,7 +11,7 @@ const Lessons = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(()=> {
+        
           fetch('http://localhost:5000/coursecontent')
           .then((res) => {
             if (!res.ok) {
@@ -22,11 +22,12 @@ const Lessons = () => {
           .then((result) => {
             console.log(result);
             setDetails(result[0].subtopics[0]);
+            console.log(details);
             setData(result);
             setIsLoading(false);
           })
           .catch((error) => console.error(error)); 
-        },100)
+        
       }, []);
     
    

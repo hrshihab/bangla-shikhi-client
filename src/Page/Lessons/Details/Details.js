@@ -7,14 +7,13 @@ import { Link } from 'react-router-dom';
 import Vowel from '../../nobdevLesson/vowel.json';
 import PopUp from '../Popup.js';
 import PopUp2 from '../PopUp2.js';
-import { useQuery } from '@tanstack/react-query';
+import Quiz from '../../nobdevLesson/quiz/Quizz.js';
 
 const Details = ({details,handleDetails}) => {
   const {prevTopicId,nextTopicId,id} = details
   const [reportStatus, setReportStatus] = useState(false);
-  const [shareStatus, setShareStatus] = useState(false); 
+  const [shareStatus, setShareStatus] = useState(false);
 
-  console.log(details);
   const handleReport = () => {
     setReportStatus(!reportStatus);
   }
@@ -23,16 +22,27 @@ const Details = ({details,handleDetails}) => {
     setShareStatus(!shareStatus);
   }
   
-   const {data:lessons = [],refetch,isLoading} = useQuery({
-    queryKey:[],
-    queryFn: async () => {
-      const res = await fetch('http://localhost:5000/lessons')
-      const result = await res.json()
-      console.log(result);
-      return result
-    }
-   })
+{/*
+   useEffect(()=> {
+      
+        fetch('http://localhost:5000/details')
+        .then((res)=> {
+          if(!res.ok) {
+            throw new Error('Deatails cannot load')
+          }
 
+           return res.json();
+        })
+        .then((result) => {
+          console.log(result);
+          setVowel(result);
+          
+        })
+        .catch((error)=> {
+          console.error(error.message);
+        })
+   },[]);
+  */}
   return (
     <div className='mx-auto shadow rounded-xl'>
       <div class=" my-4 py-6 border-pink-600 mx-auto  px-10 overflow-x-auto">
@@ -40,13 +50,16 @@ const Details = ({details,handleDetails}) => {
             details.type==='video' && <VideoShow details={details} > </VideoShow>
         }
         {
-            details.type==='text' && <TextShow characters={lessons} topicId={details.id}></TextShow>
+            details.type==='text' && <TextShow characters={Vowel} topicId={details.id}></TextShow>
         }
         {
-            details.type==='letter' && <Letters characters={lessons} topicId = {details.id}></Letters>
+            details.type==='letter' && <Letters characters={Vowel} topicId = {details.id}></Letters>
         }
         {
           details.type ==='pdf' && <PdfShow details={details}></PdfShow>
+        }
+        {
+          details.type ==='exercise' && <Quiz> </Quiz>
         }
         </div> 
         <div className='flex justify-between px-4'>

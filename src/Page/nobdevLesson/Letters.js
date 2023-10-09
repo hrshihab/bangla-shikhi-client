@@ -13,7 +13,7 @@ export default function Letters(props) {
             if(character.topicId===topicId) return <Letter key = {character.id} borno={character.borno} color={character.color} id = {character.id} text = {character.text} topicId={topicId} audioLink={character.audioLink}> </Letter>
             }
             )
-        } 
+        }
     </div>
   );
 };

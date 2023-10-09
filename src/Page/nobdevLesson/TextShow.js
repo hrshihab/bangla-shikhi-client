@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function TextShow({characters,topicId}) {
     var x;
-    console.log(characters);
+    //console.log(characters);
      characters.find((character)=> {
         if(character.topicId===topicId) x = character;
     })

@@ -20,6 +20,8 @@ import AdminRoute from "./AdminRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 import LessonsUpdate from '../Page/Dashboard/Lessons/Lessons/LessonsUpdate'
+import Payment from "../Page/Payment/Payment";
+import Donations from "../Page/Dashboard/Donations/Donations";
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../layout/Main");
 const { default: Home } = require("../Page/Home/Home/Home");
@@ -69,6 +71,10 @@ const router = createBrowserRouter([
       {
         path:'/profile',
         element:<Profile></Profile>
+      },
+      {
+        path:'/donate',
+        element:<Payment></Payment>
       }
     ]
   },
@@ -99,7 +105,12 @@ const router = createBrowserRouter([
       {
         path:'/dashboard/lessons',
         element:<AdminRoute><LessonsUpdate></LessonsUpdate></AdminRoute>
+      },
+      {
+        path:'/dashboard/donations',
+        element:<AdminRoute><Donations></Donations></AdminRoute>
       }
+      
     ]
   }
 ])
